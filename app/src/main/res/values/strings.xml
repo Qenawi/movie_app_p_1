@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MovieAppNanno_phase1</string>
+    <!--              API KEY               -->
+    <string name="API_KEy">api_key=7d1dd3f8f443ecde27c323485a170bdc</string>
+    <!-- main activity strings-->
+    <string name="popular_TAG">popular</string>
+    <string name="top_rated_TAG">top_rated</string>r
+    <string name="BASE_URL">http://api.themoviedb.org/3/movie/</string>
+    <string name="BASE_image_URL">http://image.tmdb.org/t/p/w780/</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- sending&keys  -->
+    <string name="mainFragment_To_detail_fragment_income_data">0001</string>
+    <!-- sending&keys  -->
+</resources>
