@@ -1,9 +1,9 @@
-package com.example.qenawi.movieappnanno_phase1.jsonParSers;
+package com.example.qenawi.movieappnanophase1.jsonparsers;
 
 import android.os.AsyncTask;
 
-import com.example.qenawi.movieappnanno_phase1.interfaces.JSon_parser_listner;
-import com.example.qenawi.movieappnanno_phase1.items.income_data;
+import com.example.qenawi.movieappnanophase1.interfaces.jsonparserlistner;
+import com.example.qenawi.movieappnanophase1.items.IncomeData;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,11 +14,11 @@ import java.util.ArrayList;
 /**
  * Created by QEnawi on 4/14/2016.
  */
-public class Main_grid_parser extends AsyncTask<Object, Void, ArrayList<?>> {
+public class MainGridParser extends AsyncTask<Object, Void, ArrayList<?>> {
     // Give me Json String
     int tag;
-    private JSon_parser_listner Call_back;
-    public Main_grid_parser(JSon_parser_listner cb)
+    private jsonparserlistner Call_back;
+    public MainGridParser(jsonparserlistner cb)
     {
         this.Call_back=cb;
     }
@@ -42,16 +42,16 @@ public class Main_grid_parser extends AsyncTask<Object, Void, ArrayList<?>> {
     //-------------------start parsing--------------
     ArrayList<?> parse(String Jsonx)
             throws JSONException {
-            income_data data;// item to hold data only
+            IncomeData data;// item to hold data only
 if (Jsonx==null)return  null;
-        ArrayList<income_data> res = new ArrayList<income_data>();
+        ArrayList<IncomeData> res = new ArrayList<IncomeData>();
         String poster_path, overview, release_date, title, backdrop_path,id;
         String popularity, vote_count, vote_average;
         JSONObject all = new JSONObject(Jsonx);
         JSONArray Result = all.getJSONArray("results");
         for (int pos = 0; pos < Result.length(); pos++)
         {
-            data = new income_data();
+            data = new IncomeData();
             JSONObject tmp = Result.getJSONObject(pos);
             title = tmp.getString("title");
             poster_path = tmp.getString("poster_path");

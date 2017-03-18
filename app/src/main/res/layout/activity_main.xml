@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.qenawi.movieappnanno_phase1.MainActivity">
+    tools:context="com.example.qenawi.movieappnanophase1.MainActivity">
 
     <FrameLayout
         android:id="@+id/contentFragment"
-        android:background="#3aa13a"
+        android:background="#b6b9b6"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />

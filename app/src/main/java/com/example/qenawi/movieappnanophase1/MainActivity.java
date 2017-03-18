@@ -1,4 +1,4 @@
-package com.example.qenawi.movieappnanno_phase1;
+package com.example.qenawi.movieappnanophase1;
 
 import android.content.res.Configuration;
 import android.net.Uri;
@@ -7,11 +7,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.qenawi.movieappnanno_phase1.Fragments.Detail_activity_fragment;
-import com.example.qenawi.movieappnanno_phase1.Fragments.main_Grid_fragment;
-import com.example.qenawi.movieappnanno_phase1.items.income_data;
+import com.example.qenawi.movieappnanophase1.fragments.DetailActivityFragment;
+import com.example.qenawi.movieappnanophase1.fragments.MainGridFragment;
+import com.example.qenawi.movieappnanophase1.items.IncomeData;
 
-public class MainActivity extends AppCompatActivity implements main_Grid_fragment.OnFragmentInteractionListener,Detail_activity_fragment.OnFragmentInteractionListener
+public class MainActivity extends AppCompatActivity implements MainGridFragment.OnFragmentInteractionListener,DetailActivityFragment.OnFragmentInteractionListener
 {
  Boolean Fragment1,Fragment2,Fragment3;
 
@@ -32,11 +32,11 @@ public class MainActivity extends AppCompatActivity implements main_Grid_fragmen
 
     }
     @Override
-    public void onFragmentInteraction(income_data uri)
+    public void onFragmentInteraction(IncomeData uri)
     {
      Call_DEtail_FRAG(uri);
     }//main Fragment
-    void Call_DEtail_FRAG(income_data packge)
+    void Call_DEtail_FRAG(IncomeData packge)
     {
         Fragment2=true;
         Fragment1=false;
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements main_Grid_fragmen
         Bundle bundle = new Bundle();
         bundle.putSerializable(getString(R.string.mainFragment_To_detail_fragment_income_data), packge);
         //
-        Detail_activity_fragment fragment = new Detail_activity_fragment();
+        DetailActivityFragment fragment = new DetailActivityFragment();
         fragment.setArguments(bundle);//set data
         android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
         android.support.v4.app.FragmentTransaction transaction = fm.beginTransaction();
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements main_Grid_fragmen
            Fragment2=false;
            Fragment1=true;
            Fragment3=false;
-           main_Grid_fragment fragment = new main_Grid_fragment();
+           MainGridFragment fragment = new MainGridFragment();
            FragmentManager fm = getSupportFragmentManager();
            FragmentTransaction transaction = fm.beginTransaction();
            transaction.replace(R.id.contentFragment, fragment, "main_frag"); //Container -> R.id.contentFragment

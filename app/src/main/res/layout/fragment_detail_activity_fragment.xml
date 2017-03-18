@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:padding="10dp"
     android:layout_height="match_parent"
-    tools:context="com.example.qenawi.movieappnanno_phase1.Fragments.Detail_activity_fragment"
+    tools:context="com.example.qenawi.movieappnanophase1.fragments.DetailActivityFragment"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"

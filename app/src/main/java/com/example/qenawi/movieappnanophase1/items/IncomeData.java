@@ -1,12 +1,12 @@
-package com.example.qenawi.movieappnanno_phase1.items;
+package com.example.qenawi.movieappnanophase1.items;
 
 import java.io.Serializable;
 
 /**
  * Created by QEnawi on 3/31/2016.
  */
-public class income_data implements Serializable {
-    public income_data()
+public class IncomeData implements Serializable {
+    public IncomeData()
     {
     }
     public String getPoster_path() {

@@ -1,4 +1,4 @@
-package com.example.qenawi.movieappnanno_phase1;
+package com.example.qenawi.movieappnanophase1;
 
 import org.junit.Test;
 

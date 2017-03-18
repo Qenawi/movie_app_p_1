@@ -1,9 +1,9 @@
-package com.example.qenawi.movieappnanno_phase1.async_task;
+package com.example.qenawi.movieappnanophase1.asynctask;
 
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.example.qenawi.movieappnanno_phase1.interfaces.ASync_TASK_LisTner1;
+import com.example.qenawi.movieappnanophase1.interfaces.asynctasklistner1;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -16,11 +16,11 @@ import java.net.URL;
 /**
  * Created by QEnawi on 4/12/2016.
  */
-public class GET_JSON_FROM_URL extends AsyncTask<Object,Void,String>
+public class GetJsonFromUrl extends AsyncTask<Object,Void,String>
 {
-    private ASync_TASK_LisTner1<String> Call_BACK;
+    private asynctasklistner1<String> Call_BACK;
     int tag;
-    public GET_JSON_FROM_URL(ASync_TASK_LisTner1<String> cb)
+    public GetJsonFromUrl(asynctasklistner1<String> cb)
     {
         this.Call_BACK = cb;
     }
